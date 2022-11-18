@@ -2,6 +2,8 @@ package alirezamontazer.createbest.productcatalog_v3;
 
 
 import static org.junit.Assert.*;
+
+import org.junit.Assert;
 import org.junit.Test;
 
 public class ProductTest {
@@ -21,7 +23,8 @@ public class ProductTest {
     public void checkProductPrice() {
         // I am making this test to fail
         Product aProduct = new Product("1", "DELL MONITOR", 180);
-        assertEquals("Check the price of the product", "189", aProduct.getPrice());
+//        assertEquals("Check the price of the product", "189", aProduct.getPrice());
+        Assert.assertEquals(180.0, aProduct.getPrice(), 0.00002);
     }
 
 }
